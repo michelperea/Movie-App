@@ -4,15 +4,15 @@ Movie application project.
 Created with HTML, CSS and JavaScript.
 
 ## Author ✒️
-**Ricardo Perea**
+**Michel Perea**
 
-* [LinkedIn](https://www.linkedin.com/in/ricardo-perea/)
+* [LinkedIn](https://www.linkedin.com/in/michel-perea/)
 
 
 ## Project preview
 If you want to take a look at the project, I recommend you:
 
- https://ricardoperea.github.io/Movie-App/
+ https://michel.github.io/Movie-App/
 
 
 ## Installation 
