@@ -1,21 +1,29 @@
+// Definir las URLs de la API y las rutas de imágenes
 const API_URL = 'https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=3fd2be6f0c70a2a598f084ddfb75487c&page=1'
 const IMG_PATH = 'https://image.tmdb.org/t/p/w1280'
-const SEARCH_API = 'https://api.themoviedb.org/3/search/movie?api_key=3fd2be6f0c70a2a598f084ddfb75487c&query="'
+const SEARCH_API = 'https://api.themoviedb.org/3/search/movie?api_key=3fd2be6f0c70a2a598f084ddfb75487c&query='
 
+// Obtener elementos HTML del DOM
 const main = document.getElementById('main')
 const form = document.getElementById('form')
 const search = document.getElementById('search')
 
-// Get initial movies
+// Obtener películas iniciales al cargar la página
 getMovies(API_URL)
 
+// Función asincrónica para obtener películas
 async function getMovies(url) {
-    const res = await fetch(url)
-    const data = await res.json()
+    try {
+        const res = await fetch(url)
+        const data = await res.json()
 
-    showMovies(data.results)
+        showMovies(data.results)
+    } catch (error) {
+        console.error('Error al obtener películas:', error)
+    }
 }
 
+// Función para mostrar películas en el DOM
 function showMovies(movies) {
     main.innerHTML = ''
 
@@ -28,38 +36,43 @@ function showMovies(movies) {
         movieEl.innerHTML = `
             <img src="${IMG_PATH + poster_path}" alt="${title}">
             <div class="movie-info">
-          <h3>${title}</h3>
-          <span class="${getClassByRate(vote_average)}">${vote_average}</span>
+                <h3>${title}</h3>
+                <span class="${getClassByRate(vote_average)}">${vote_average}</span>
             </div>
             <div class="overview">
-          <h3>Overview</h3>
-          ${overview}
-        </div>
+                <h3>Overview</h3>
+                ${overview}
+            </div>
         `
         main.appendChild(movieEl)
     })
 }
 
+// Función para obtener la clase de estilo según la calificación de la película
 function getClassByRate(vote) {
-    if(vote >= 8) {
+    if (vote >= 8) {
         return 'green'
-    } else if(vote >= 5) {
+    } else if (vote >= 5) {
         return 'orange'
     } else {
         return 'red'
     }
 }
 
+// Manejar la búsqueda de películas al enviar el formulario
 form.addEventListener('submit', (e) => {
     e.preventDefault()
 
     const searchTerm = search.value
 
-    if(searchTerm && searchTerm !== '') {
+    if (searchTerm && searchTerm.trim() !== '') {
+        // Realizar una búsqueda de películas
         getMovies(SEARCH_API + searchTerm)
 
+        // Limpiar el campo de búsqueda
         search.value = ''
     } else {
+        // Recargar la página si no se ingresó ningún término de búsqueda
         window.location.reload()
     }
 })
