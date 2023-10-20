@@ -11,6 +11,14 @@
             min-height: 100vh;
         }
 
+         h1 {
+            text-align: center;
+            color: white;
+            font-family: sans;
+            font-weight: bold;
+            font-size: 21px;
+         }
+
          h2 {
             text-align: center;
             color: white;
