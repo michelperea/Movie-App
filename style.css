@@ -1,65 +1,56 @@
+/* Estilos generales para el cuerpo */
+body {
+    background: linear-gradient(to right, #000, #292929);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
 
-      /* Estilos generales para el cuerpo */
-        body {
-            background: linear-gradient(to right, #00a8ff, #0c7b8e);
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
+/* Estilos para los títulos */
+h1, h2 {
+    text-align: center;
+    color: #00a8ff;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 24px; /* Aumentamos el tamaño de fuente para que destaque */
+}
 
-         h1 {
-            text-align: center;
-            color: white;
-            font-family: sans;
-            font-weight: bold;
-            font-size: 21px;
-         }
+/* Contenedor principal centrado vertical y horizontalmente */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
 
-         h2 {
-            text-align: center;
-            color: white;
-            font-family: sans;
-            font-weight: bold;
-            font-size: 21px;
-        }
+/* Panel con sombra y borde redondeado */
+.panel {
+    background: linear-gradient(to bottom, #00a8ff, #0c7b8e);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
 
+/* Botón de estilo neon */
+.btn-neon {
+    background-color: transparent;
+    color: #00a8ff;
+    border: 2px solid #00a8ff;
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.3s;
+    cursor: pointer;
+}
 
-        /* Contenedor principal centrado vertical y horizontalmente */
-        .container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-        }
-
-        /* Panel con sombra y borde redondeado */
-        .panel {
-            background: linear-gradient(to bottom, #00a8ff, #0c7b8e);
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            text-align: center;
-        }
-
-        /* Botón de estilo neon */
-        .btn-neon {
-            background-color: transparent;
-            color: #00a8ff;
-            border: 2px solid #00a8ff;
-            border-radius: 30px;
-            padding: 10px 20px;
-            font-weight: bold;
-            text-transform: uppercase;
-            text-decoration: none;
-            transition: 0.3s;
-            cursor: pointer;
-        }
-
-        .btn-neon:hover {
-            background-color: #00a8ff;
-            color: #fff;
-        }
+.btn-neon:hover {
+    background-color: #00a8ff;
+    color: #fff;
+}
