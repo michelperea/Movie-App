@@ -1,75 +1,65 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Aplicación Profesional</title>
 
-:root {
-  --primary-color: #22254b;
-  --secondary-color: #373b69;
-}
+  <!-- Enlaza el archivo de estilos CSS de Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-* {
-  box-sizing: border-box;
-}
+  <!-- Estilos personalizados -->
+  <style>
+    /* Establecer un fondo degradado azul y neon en el cuerpo */
+    body {
+      background: linear-gradient(to right, #00a8ff, #0c7b8e);
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
 
-body {
-  background-color: var(--primary-color);
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-}
+    /* Contenedor principal centrado vertical y horizontalmente */
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
 
-header {
-  padding: 1rem;
-  display: flex;
-  justify-content: flex-end;
-  background-color: var(--secondary-color);
-}
+    /* Panel con sombra y borde redondeado */
+    .panel {
+      background: linear-gradient(to bottom, #00a8ff, #0c7b8e);
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+    }
 
-/* Estilos para el nombre del programador (h1) */
-h1 {
-  color: #fff;
-  font-size: 2rem; /* Tamaño del texto aumentado para destacar */
-  font-weight: 600; /* Texto en negrita */
-  margin: 0; /* Eliminado el margen superior predeterminado */
-}
+    /* Botón de estilo neon */
+    .btn-neon {
+      background-color: transparent;
+      color: #00a8ff;
+      border: 2px solid #00a8ff;
+      border-radius: 30px;
+      padding: 10px 20px;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: 0.3s;
+      cursor: pointer;
+    }
 
-/* Estilos para el subtítulo (h2) */
-h2 {
-  color: #f2a154; /* Color de resaltado */
-  font-size: 1.5rem; /* Tamaño del texto */
-  margin-top: 0; /* Eliminado el margen superior predeterminado */
-}
+    .btn-neon:hover {
+      background-color: #00a8ff;
+      color: #fff;
+    }
+  </style>
+</head>
 
-.search {
-  background-color: transparent;
-  border: 2px solid var(--primary-color);
-  border-radius: 50px;
-  font-family: inherit;
-  font-size: 1rem;
-  padding: 0.5rem 1rem;
-  color: #fff;
-}
-
-.search::placeholder {
-  color: #7378c5;
-}
-
-.search:focus {
-  outline: none;
-  background-color: var(--primary-color);
-}
-
-main {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.movie {
-  width: 300px;
-  margin: 1rem;
-  background-color: var(--secondary-color);
-  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
-  position: relative;
-  overflow: hidden;
-  border-radius: 3px;
-}
-
-/* Resto del CSS permanece igual */
+<body>
+  <div class="container">
+    <div class="panel">
+      <a href="#" class="btn btn-neon">Acceder</a>
+    </div>
+  </div>
+</body>
+</html>
